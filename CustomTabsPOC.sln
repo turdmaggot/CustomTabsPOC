@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTabsPOC", "CustomTabsPOC\CustomTabsPOC.csproj", "{3BA6C2D9-C816-492E-8B3C-FD3749C1CF67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BA6C2D9-C816-492E-8B3C-FD3749C1CF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA6C2D9-C816-492E-8B3C-FD3749C1CF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA6C2D9-C816-492E-8B3C-FD3749C1CF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA6C2D9-C816-492E-8B3C-FD3749C1CF67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCEE568B-78A9-4C4D-B5CD-C7527B0238E7}
+	EndGlobalSection
+EndGlobal
