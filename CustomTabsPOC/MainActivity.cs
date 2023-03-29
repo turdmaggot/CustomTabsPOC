@@ -8,6 +8,8 @@ using AndroidX.AppCompat.App;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Snackbar;
 using Android.Content;
+using AndroidX.Browser.CustomTabs;
+using Android.Content.PM;
 
 namespace CustomTabsPOC
 {
@@ -65,13 +67,21 @@ namespace CustomTabsPOC
         {
             try
             {
-                Uri uri = new Uri("https://www.youtube.com/watch?v=gZGmDKxEp-I");
-                //Uri uri = new Uri("https://www.reinertupaz.com/");
+                string url = "https://www.youtube.com/watch?v=gZGmDKxEp-I";
+
+                Uri uri = new Uri(url);
                 Android.Net.Uri androidUri = Android.Net.Uri.Parse(uri.ToString());
-                var i = new Intent(Intent.ActionView, androidUri);
-                i.AddCategory(Intent.CategoryBrowsable);
-                i.AddFlags(ActivityFlags.NewTask | ActivityFlags.RequireNonBrowser);
-                StartActivity(i);
+
+                CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                CustomTabsIntent customTabsIntent = builder.Build();
+
+                // TODO: We need to find thepackagename of the default browser. Many browsers support customtabs.
+                // This needs to be explicitly included as without this, the YouTube app is opened instead.
+                customTabsIntent.Intent.SetPackage("com.android.chrome");
+
+                //customTabsIntent.Intent.SetPackage("org.mozilla.firefox");
+
+                customTabsIntent.LaunchUrl(this, androidUri);
             }
             catch (Exception ex)
             {
